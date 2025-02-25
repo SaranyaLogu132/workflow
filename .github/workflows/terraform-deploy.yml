@@ -45,8 +45,8 @@ jobs:
 
       - name: Plan Terraform Changes
         run: |
-          terraform plan -var="aws_region=${{ inputs.aws-region }}" -var="s3_bucket_name=${{ inputs.s3-bucket-name }}"
+          terraform plan
 
       - name: Apply Terraform Changes
         run: |
-          terraform apply -auto-approve -var="aws_region=${{ inputs.aws-region }}" -var="s3_bucket_name=${{ inputs.s3-bucket-name }}"
+          terraform apply -auto-approve
