@@ -40,15 +40,12 @@ jobs:
 
       - name: Initialize Terraform
         run: |
-          cd terraform
           terraform init
 
       - name: Plan Terraform Changes
         run: |
-          cd terraform
           terraform plan -var="aws_region=${{ inputs.aws-region }}" -var="s3_bucket_name=${{ inputs.s3-bucket-name }}"
 
       - name: Apply Terraform Changes
         run: |
-          cd terraform
           terraform apply -auto-approve -var="aws_region=${{ inputs.aws-region }}" -var="s3_bucket_name=${{ inputs.s3-bucket-name }}"
