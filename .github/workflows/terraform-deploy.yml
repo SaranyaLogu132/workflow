@@ -5,7 +5,7 @@ on:
     inputs:
       environment:
         description: "Target environment (dev/stage/prod)"
-        required: true
+        required: false
         type: string
     secrets:
       AWS_ACCESS_KEY_ID:
